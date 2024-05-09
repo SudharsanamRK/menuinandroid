@@ -11,21 +11,15 @@ To create a option menu to display menu items using Android Studio.
 Latest Version Android Studio
 
 ## ALGORITHM
-
+```
 Step 1: Open Android Studio and then click on File -> New -> New project.
-
 Step 2: Then type the Application name as HelloWorld and click Next.
-
 Step 3: Then select the Minimum SDK as shown below and click Next.
-
 Step 4: Then select the Empty Activity and click Next. Finally click Finish.
-
 Step 5: Design layout in activity_main.xml.
-
 Step 6: Display message give in MainActivity file.
-
 Step 7: Save and run the application.
-
+```
 
 ## PROGRAM
 ```
@@ -42,7 +36,6 @@ Registeration Number : 212222040163
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -50,7 +43,6 @@ Registeration Number : 212222040163
         android:background="?attr/colorPrimary"
         app:title="Options Menu Example"
         app:titleTextColor="@android:color/white" />
-
 </RelativeLayout>
 ```
 ## In menu/option.xml
@@ -71,24 +63,19 @@ Registeration Number : 212222040163
 ## In MainActivity.java
 ```java
 package com.example.menuinandroid;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
-
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // Set the toolbar as the action bar
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
